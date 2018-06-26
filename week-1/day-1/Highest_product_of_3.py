@@ -1,17 +1,22 @@
+import unittest
+
+
 def highest_product_of_3(list_of_ints):
 
-   
-   length = len(list_of_ints)
-   if length<3:
-       raise Exception("yo")
-   sorted_list = sorted(list_of_ints)
-   a = sorted_list[length -1] * sorted_list[length -2] * sorted_list[length -3]
-   b = sorted_list[length -1] * sorted_list[0] * sorted_list[1]
+    list_of_ints.sort()
+    a=list_of_ints
+    postive3=a[len(a)-1]*a[len(a)-2]*a[len(a)-3]
+    if(a[0]>=0 or a[0]<0 and a[1]>=0):
+        z= postive3
+    else:
+        if(a[0]<0 and a[1]<0):
+            negative2_positive1=a[0]*a[1]*a[len(a)-1]
+        if(negative2_positive1<postive3):
+            z=postive3
+        else:z=negative2_positive1
 
-   if a > b:
-   	return a
-   else:
-   	return b
+    return z
+
 
       
 TESTCASES
