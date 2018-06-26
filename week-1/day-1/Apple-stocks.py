@@ -25,3 +25,13 @@ def get_max_profit(stock_prices_oda):
 
 
     return best_profit
+
+
+
+Testcases
+
+print(get_max_profit([7, 2, 8, 9]))  expected = 7
+print(get_max_profit([1, 6, 7, 9]))  expected = 8
+print(get_max_profit([9, 7, 4, 1]))  expected = -2
+print(get_max_profit([1, 1, 1, 1]))  expected = 0
+print(get_max_profit([1, 5, 3, 2]))  expected = 4
